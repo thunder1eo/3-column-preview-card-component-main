@@ -1,0 +1,83 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca';
+}
+body {
+    background-color: hsl(0, 0%, 95%);
+}
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.column {
+    width: 300px;
+    padding: 45px;
+}
+.column button {
+    padding: 10px 30px 10px 30px;
+    border-radius: 30px;
+    border: 2px transparent solid;
+    margin-top: 70px;
+    font-weight: bolder;
+    transition: all 0.3s ease-in;
+}
+.column button:hover {
+    border: 2px hsl(0, 0%, 95%) solid;
+    background-color: transparent;
+    color: hsl(0, 0%, 95%);
+    transition: all 0.3s ease-in;
+}
+.column p {
+    font-family: 'Lexend Deca';
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+}
+.column h3 {
+    font-family: 'Big Shoulders Display';
+    font-weight: 700;
+    font-size: 36px;
+    color: hsl(0, 0%, 95%);
+    letter-spacing: 3px;
+    margin: 30px 0 30px 0;
+}
+.col1 {
+    background-color: hsl(31, 77%, 52%);
+}
+.col1 button {
+    color: hsl(31, 77%, 52%);
+}
+.col2 {
+    background-color: hsl(184, 100%, 22%);
+}
+.col2 button {
+    color: hsl(184, 100%, 22%);
+}
+.col3 {
+    background-color: hsl(179, 100%, 13%);
+}
+.col3 button {
+    color: hsl(179, 100%, 13%);
+}
+/* ADAPTIVE */
+@media only screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    .column {
+        width: 375px;
+        padding: 25px;
+    }
+    .column button {
+        margin-top: 40px;
+    }
+    .column h3 {
+        margin: 10px 0 10px 0;
+    }
+}
